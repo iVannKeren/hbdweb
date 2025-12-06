@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Dekelll!</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Mengubah tampilan batang scroll biar cute */
+        .wish-text::-webkit-scrollbar {
+            width: 8px;
+        }
+        .wish-text::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+            border-radius: 10px;
+        }
+        .wish-text::-webkit-scrollbar-thumb {
+            background: #FFB7B2; /* Warna Pink Pastel */
+            border-radius: 10px;
+        }
+        .wish-text::-webkit-scrollbar-thumb:hover {
+            background: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="confetti"></canvas>
+
+    <div class="container">
+        <header class="animate-pop">
+            <h1 class="title">Happy Birthday!</h1>
+            <p class="subtitle">Untuk orang paling spesial ❤️</p>
+        </header>
+
+        <div class="stage">
+            
+            <div class="mascot-wrapper" onclick="mascotJump()">
+                <img src="https://c.tenor.com/dTKquAPxUhYAAAAd/tenor.gif" 
+                     alt="Nailong Lucu" 
+                     class="mascot-img">
+                
+                <div class="shadow"></div>
+            </div>
+
+            <div class="cake-wrapper">
+                <svg viewBox="0 0 100 100" width="100" height="100">
+                    <ellipse cx="50" cy="90" rx="40" ry="10" fill="#E0E0E0"/>
+                    <rect x="20" y="60" width="60" height="30" rx="5" fill="#FFB7B2"/>
+                    <rect x="20" y="55" width="60" height="10" rx="5" fill="#FF9EAA"/>
+                    <circle cx="25" cy="60" r="5" fill="#FFF"/>
+                    <circle cx="35" cy="60" r="5" fill="#FFF"/>
+                    <circle cx="45" cy="60" r="5" fill="#FFF"/>
+                    <circle cx="55" cy="60" r="5" fill="#FFF"/>
+                    <circle cx="65" cy="60" r="5" fill="#FFF"/>
+                    <circle cx="75" cy="60" r="5" fill="#FFF"/>
+                    <rect x="48" y="40" width="4" height="20" fill="#6C5CE7"/>
+                    <path class="flame" d="M50 40 Q45 30 50 25 Q55 30 50 40" fill="#FDcb6E"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="btn-wish" class="btn-primary">💌 Buka Ucapannya</button>
+            <button id="btn-music" class="btn-secondary">🎵 Play Music</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="close-btn">&times;</div>
+            
+            <h2>HBD Dokk!! ✨</h2>
+            
+            <p class="wish-text" style="
+                text-align: left; 
+                font-size: 0.95rem; 
+                max-height: 250px; 
+                overflow-y: auto; 
+                padding-right: 10px; 
+                border-top: 2px dashed #eee; 
+                border-bottom: 2px dashed #eee;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            ">
+                "SELAMAT ULANG TAHUN DEKELLLLL 🎉🎉🎉🍵🤍<br><br>
+                Semoga di usia yang baru inii kamuu selalu dikelilingi sama orang orang baikk yaaa pokonyaa yang terbaik dari masa lalu kamuu, selalu diberi keberkahan jugaa, dan kemudahan disegala sesuatuu, dan lagii semogaa kamu selalu diberikan 3K (Kesehatan, Keselamatan, sama Kepastian) wkwkwk.<br><br>
+                HBD yaaa dokk!!!<br>
+                Makasih udah mau nemenin sampe sejauh iniii, makasih udah pengertian selalu caree. Make u wish aku selalu dukung apa yang kamu lakuin atau keputusan apa yang kamu buat soo be happier with ur friend and ur homeworkk, maaf yaaa kalau belum bisa jadi the best dari cowo" smancar,, pokonya HBD wehhh sekarang ma ungguuuu bukan dekel aku lagiii😭. This is your a special dayy and MAKE UR WISH FOR THIS DAYY AND YOU WAN'T IT..."
+            </p>
+
+            <div class="modal-footer">
+                <small>from: paketu dpr(2125)</small>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="lagu.mpeg" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
